@@ -11,7 +11,7 @@ dir.create(paste0(getwd(),"/data"))
 setwd("data")
 
 ## create empty csv file
-file.create(paste0(getwd(),"/quiz1_q1file.csv.csv"))
+file.create(paste0(getwd(),"/quiz1_q1file.csv"))
 
 ## check that empty file exists
 list.files()
