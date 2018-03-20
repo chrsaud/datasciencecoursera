@@ -146,8 +146,8 @@ names(group_means)[names(group_means) %in% c("Group.1","Group.2")] <- c("subject
 
 ## output to text file
 ## create empty text for data
-if (!file.exists("final_project_data.txt")){
-  file.create("final_project_data.txt")
+if (!file.exists("../final_project/final_project_data.txt")){
+  file.create("../final_project/final_project_data.txt")
 }
-write.table(group_means, "final_project_data.txt", row.name = FALSE)
+write.table(group_means, "../final_project/final_project_data.txt", row.name = FALSE)
 

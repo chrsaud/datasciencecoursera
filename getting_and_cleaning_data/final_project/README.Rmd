@@ -1,0 +1,19 @@
+## Getting and Cleaning Data Final Project
+The goal of this analysis is to prove my ability to obtain and clean raw data.
+
+The raw data obtained is of body movement captured by Samsung smart phones. The data is downloaded from the UCI data hosting site, read into R, merged, subsetted, and output to a text data file.
+
+The R script that performs this process is called run_analysis.R and the output text data file is called final_project_data.txt. More information about the data can be found in the code_book.Rmd file
+
+### Analysis process
+The analysis is broken down into 5 parts
+
+The first part obtains the data from the internet using download.file(). The data obtained is zipped, so the unzip() command is used to decompress the folder
+
+Once the decompressed folder is created, the first two tables are loaded to R. These tables are lists of the activities performed in the study and the names of the feature vectors. The symbols and beginning numbers are removed from the names of the feature vectors using gsub()
+
+The next two section are for reading in the training and test data respectively. Once the data is read in, the feature vector labels are used to name the variables. Based on these feature vector labels the data is subset to only measurements of mean and standard deviation. The subject ids and activity ids are appended to the data using cbind and the activity names are merged onto the data using the activity id available in both tables.
+
+Finally the test and training data are appended to each other and the mean is taken for every subject and activity combination.
+
+This final data set is output to the final_project_data.txt file
