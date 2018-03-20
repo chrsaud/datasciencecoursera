@@ -30,7 +30,7 @@ unlink(temp)
 # ------------------- #
 
 file <- "UCI HAR Dataset/activity_labels.txt"
-labels <- read_table(file, delim = " ", col_names = FALSE)
+labels <- read_table(file, col_names = FALSE)
 names(labels) <- c("activity_key","activity_name")
 
 ## feature names
@@ -150,3 +150,4 @@ if (!file.exists("final_project_data.txt")){
   file.create("final_project_data.txt")
 }
 write.table(group_means, "final_project_data.txt", row.name = FALSE)
+

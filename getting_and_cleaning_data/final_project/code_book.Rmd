@@ -6,78 +6,38 @@ This study used raw data obtained from the "Human Activity Recognition using Sma
 This study limits the raw data to only the measures of mean and standard deviation, and then takes the average of these measures for each subject and activity combination.
 
 ### Included Variables
+#### Identifiers
+* subject_num -- identifies the test subject  
+* activity_name -- identifies the activity that the subject is performing. The activities are:
+    + WALKING
+    + WALKING_UPSTAIRS
+    + WALKING_DOWNSTAIRS
+    + SITTING
+    + STANDING
+    + LAYING
+    
+#### Measurements
+* tBodyAcc-XYZ      -- body acceleration
+* tGravityAcc-XYZ   -- gravity acceleration
+* tBodyAccJerk-XYZ  -- linear acceleration
+* tBodyGyro-XYZ     -- gyroscope acceleration
+* tBodyGyroJerk-XYZ -- angular velocity
+* tBodyAccMag       -- magnitude of the body acceleration
+* tGravityAccMag    -- magnitude of the gravity acceleration
+* tBodyAccJerkMag   -- magnitured of the linear acceleration
+* tBodyGyroMag      -- magnitude of the gryoscope acceleration
+* tBodyGyroJerkMag  -- magnitude of the angular velocity
 
-*subject_num -- identifies the test subject  
-*activity_name -- identifies the activity that the subject is performing. activities are:
-  + WALKING
-  + WALKING_UPSTAIRS
-  + WALKING_DOWNSTAIRS
-  + SITTING
-  + STANDING
-  + LAYING
-* tBodyAccmeanX
-* tBodyAccmeanY
-* tBodyAccmeanZ
-* tBodyAccstdX
-* tBodyAccstdY
-* tBodyAccstdZ
-* tGravityAccmeanX
-* tGravityAccmeanY
-* tGravityAccmeanZ
-* tGravityAccstdX
-* tGravityAccstdY
-* tGravityAccstdZ
-* tBodyAccJerkmeanX
-* tBodyAccJerkmeanY
-* tBodyAccJerkmeanZ
-* tBodyAccJerkstdX
-* tBodyAccJerkstdY
-* tBodyAccJerkstdZ
-* tBodyGyromeanX
-* tBodyGyromeanY
-* tBodyGyromeanZ
-* tBodyGyrostdX
-* tBodyGyrostdY
-* tBodyGyrostdZ
-* tBodyGyroJerkmeanX
-* tBodyGyroJerkmeanY
-* tBodyGyroJerkmeanZ
-* tBodyGyroJerkstdX
-* tBodyGyroJerkstdY
-* tBodyGyroJerkstdZ
-* tBodyAccMagmean
-* tBodyAccMagstd
-* tGravityAccMagmean
-* tGravityAccMagstd
-* tBodyAccJerkMagmean
-* tBodyAccJerkMagstd
-* tBodyGyroMagmean
-* tBodyGyroMagstd
-* tBodyGyroJerkMagmean
-* tBodyGyroJerkMagstd
-* fBodyAccmeanX
-* fBodyAccmeanY
-* fBodyAccmeanZ
-* fBodyAccstdX
-* fBodyAccstdY
-* fBodyAccstdZ
-* fBodyAccJerkmeanX
-* fBodyAccJerkmeanY
-* fBodyAccJerkmeanZ
-* fBodyAccJerkstdX
-* fBodyAccJerkstdY
-* fBodyAccJerkstdZ
-* fBodyGyromeanX
-* fBodyGyromeanY
-* fBodyGyromeanZ
-* fBodyGyrostdX
-* fBodyGyrostdY
-* fBodyGyrostdZ
-* fBodyAccMagmean
-* fBodyAccMagstd
-* fBodyBodyAccJerkMagmean
-* fBodyBodyAccJerkMagstd
-* fBodyBodyGyroMagmean
-* fBodyBodyGyroMagstd
-* fBodyBodyGyroJerkMagmean
-* fBodyBodyGyroJerkMagstd
+For each of the above measurements a Fast Fourier Transform was applied, producing the variables below.
+
+* fBodyAcc-XYZ  
+* fBodyAccJerk-XYZ
+* fBodyGyro-XYZ
+* fBodyAccMag
+* fBodyAccJerkMag
+* fBodyGyroMag
+* fBodyGyroJerkMag
+
+Each variable has a measurement for the X, Y, and Z axis, denoted by the XYZ next to the variable name above. In the final table each variable will have an X, Y, or Z as the last letter in the variable name to identify which axis is being measured. If there is not an X, Y or Z it is the summary variable across all 3 axes. 
+
+Mean and standard deviation were captured for the variables above. In the final table each variable name will include either mean or std to identify the statistic applied.
