@@ -60,7 +60,7 @@ legend("topright",
       )
 
 lines(data$datetime, data$Sub_metering_1, col = "red")
-lines(data$datetime, data$Sub_metering_2, col = "orange")
+lines(data$datetime, data$Sub_metering_2, col = "black")
 lines(data$datetime, data$Sub_metering_3, col = "blue")
 
 ## turn off device
